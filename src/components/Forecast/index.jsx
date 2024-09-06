@@ -52,7 +52,7 @@ export default function Forecast({ lon, lat, apiKey }) {
     return (
         <>
             <button className="mt-2 sm:ml-2 p-2 bg-amber-500 font-bold text-white rounded" onClick={getForecast}>5 day forecast</button>
-            <div className="flex">
+            <div className="flex flex-wrap basis-auto">
                 {forecast &&
                     <>
                         <div className="flex m-1 p-1 border border-amber-500 rounded">
@@ -66,7 +66,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                         <div className="flex m-1 p-1 border border-amber-500 rounded">
                             <div className="flex flex-col">
                                 <p>{days[forecast[1].day]}</p>
-                                <p className="p-1.5">{forecast[1].temp}&deg;C</p>
+                                <p>{forecast[1].temp}&deg;C</p>
                                 <p>{forecast[1].type}</p>
                             </div>
                             <img className="p-1.5" src={`https://openweathermap.org/img/wn/${forecast[1].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
@@ -74,7 +74,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                         <div className="flex m-1 p-1 border border-amber-500 rounded">
                             <div className="flex flex-col">
                                 <p>{days[forecast[2].day]}</p>
-                                <p className="p-1.5">{forecast[2].temp}&deg;C</p>
+                                <p>{forecast[2].temp}&deg;C</p>
                                 <p>{forecast[2].type}</p>
                             </div>
                             <img className="p-1.5" src={`https://openweathermap.org/img/wn/${forecast[2].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
@@ -82,7 +82,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                         <div className="flex m-1 p-1 border border-amber-500 rounded">
                             <div className="flex flex-col">
                                 <p>{days[forecast[3].day]}</p>
-                                <p className="p-1.5">{forecast[3].temp}&deg;C</p>
+                                <p>{forecast[3].temp}&deg;C</p>
                                 <p>{forecast[3].type}</p>
                             </div>
                             <img className="p-1.5" src={`https://openweathermap.org/img/wn/${forecast[3].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
@@ -90,7 +90,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                         <div className="flex m-1 p-1 border border-amber-500 rounded">
                             <div className="flex flex-col">
                                 <p>{days[forecast[4].day]}</p>
-                                <p className="p-1.5">{forecast[4].temp}&deg;C</p>
+                                <p>{forecast[4].temp}&deg;C</p>
                                 <p>{forecast[4].type}</p>
                             </div>
                             <img className="p-1.5" src={`https://openweathermap.org/img/wn/${forecast[4].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
