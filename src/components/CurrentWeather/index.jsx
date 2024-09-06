@@ -17,8 +17,6 @@ export default function Weather() {
         fetch(url).then((response) => response.json())
             .then((data) => {
 
-                console.log(data)
-
                 let maxTemp = Math.round(data.main.temp);
                 let feelsLike = Math.round(data.main.feels_like);
                 let precipitation = data.weather[0].id;
@@ -45,11 +43,9 @@ export default function Weather() {
                 else {
                     setBackground("bg-[url('https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] p-1.5")
                     setUmbrella("You probably don't need an umbrella today")
-                } 
+                }
             })
     }
-    console.log(background)
-
     return (
         <div className="p-2 mx-auto md:mx-none">
             <h1 className="p-2 md:text-2xl">Enter your closest city below to see the current weather conditions</h1>
@@ -57,7 +53,7 @@ export default function Weather() {
             <input className="mt-2 md:mt-0 sm:ml-2 p-1.5 border rounded" type="text" placeholder="UK" value={country} onChange={(e) => setCountry(e.target.value)}></input>
             <button className="my-2 sm:ml-2 md:mt-0 p-2 bg-amber-500 font-bold text-white rounded" onClick={getWeather}>See weather</button>
             <div className={`${background}`}>
-                <div className="opacity-100">
+                <div>
                     {weather && (
                         <div className="p-2">
                             <div className="weather p-2 border-2 md:border-4 border-amber-500 rounded-lg md:text-xl">
