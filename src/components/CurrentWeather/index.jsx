@@ -45,7 +45,7 @@ export default function Weather() {
             <input className="p-1.5 border rounded" type="text" placeholder="Enter closest city name" value={city} onChange={(e) => setCity(e.target.value)}></input>
             <input className="mt-2 md:mt-0 sm:ml-2 p-1.5 border rounded" type="text" placeholder="UK" value={country} onChange={(e) => setCountry(e.target.value)}></input>
             <button className="mt-2 sm:ml-2 md:mt-0 p-2 bg-amber-500 font-bold text-white rounded" onClick={getWeather}>See weather</button>
-            <div className="p-1.5">
+            <div className="bg-[url('https://i.pinimg.com/474x/43/02/fb/4302fb8632ea3bd5db5f175c0c1886c0.jpg')] p-1.5">
                 {weather && (
                     <div className="p-2">
                         <div className="weather p-2 border-2 md:border-4 border-amber-500 rounded-lg md:text-xl">

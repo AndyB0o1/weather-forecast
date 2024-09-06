@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function Forecast({ lon, lat }) {
+export default function Forecast({ lon, lat, apiKey }) {
 
 
     function getForecast() {
-        const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=443ee654534541671242b4a469480a48`
+        const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`
         // const [image, setImage] = useState('');
         // const [description, setDescription] = useState('');
 
