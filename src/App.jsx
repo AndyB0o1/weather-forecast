@@ -7,11 +7,11 @@ import Header from "./components/Header"
 function App() {
 
   return (
-    <>
+    <main>
       <Header />
       <CurrentWeather />
       <Footer />
-    </>
+    </main>
   )
 }
 

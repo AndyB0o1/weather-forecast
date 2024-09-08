@@ -10,6 +10,7 @@ export default function Weather() {
     const [background, setBackground] = useState('');
     const [lon, setLon] = useState();
     const [lat, setLat] = useState();
+    const [precipitation, setPrecipitation] = useState();
     const apiKey = import.meta.env.VITE_API_KEY;
 
     function getWeather() {
@@ -33,15 +34,15 @@ export default function Weather() {
                 }
                 setWeather(currentWeather);
                 if (precipitation <= 622) {
-                    setBackground("bg-[url('https://i.pinimg.com/474x/43/02/fb/4302fb8632ea3bd5db5f175c0c1886c0.jpg')] p-1.5")
+                    setBackground("bg-[url('https://i.pinimg.com/474x/43/02/fb/4302fb8632ea3bd5db5f175c0c1886c0.jpg')] p-1.5 rounded-lg md:text-xl")
                     setUmbrella("You're going to need an umbrella today!")
                 }
                 else if (precipitation === 800) {
-                    setBackground("bg-[url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=800')] p-1.5")
+                    setBackground("bg-[url('https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=800')] p-1.5 rounded-lg md:text-xl")
                     setUmbrella("Definitely no umbrella needed today, but you might want some suncream!")
                 }
                 else {
-                    setBackground("bg-[url('https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] p-1.5")
+                    setBackground("bg-[url('https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] p-1.5 rounded-lg md:text-xl")
                     setUmbrella("You probably don't need an umbrella today")
                 }
             })
@@ -56,11 +57,11 @@ export default function Weather() {
                 <div>
                     {weather && (
                         <div className="p-2">
-                            <div className="weather p-2 border-2 md:border-4 border-amber-500 rounded-lg md:text-xl">
+                            <div className="weather">
                                 <h2 className="md:m-0.5 p-0.5 text-white drop-shadow-xl rounded ">{weather.location}</h2>
                                 <div className="flex p-1.5 rounded">
                                     <img className="p-1.5" src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt={`${weather.condition}`}></img>
-                                    <p className="my-0.5 p-1.5 font-bold text-white drop-shadow-xl rounded">{umbrella}</p>
+                                    <p className="p-1.5 text-white drop-shadow-xl rounded">{umbrella}</p>
                                 </div>
                                 <p className="m-0.5 p-0.5 text-white drop-shadow-xl rounded ">Current conditions: {weather.condition}</p>
                                 <p className="m-0.5 p-0.5 text-white drop-shadow-xl rounded ">{weather.temperature}&deg;C and feels like {weather.feels_like}&deg;C</p>
