@@ -61,7 +61,7 @@ export default function Weather() {
                                 <h2 className="md:m-0.5 p-0.5 text-white drop-shadow-xl rounded ">{weather.location}</h2>
                                 <div className="flex p-1.5 rounded">
                                     <img className="p-1.5" src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt={`${weather.condition}`}></img>
-                                    <p className="p-1.5 text-white drop-shadow-xl rounded">{umbrella}</p>
+                                    <p className="p-1.5 mt-8 text-white drop-shadow-xl rounded">{umbrella}</p>
                                 </div>
                                 <p className="m-0.5 p-0.5 text-white drop-shadow-xl rounded ">Current conditions: {weather.condition}</p>
                                 <p className="m-0.5 p-0.5 text-white drop-shadow-xl rounded ">{weather.temperature}&deg;C and feels like {weather.feels_like}&deg;C</p>
@@ -70,7 +70,7 @@ export default function Weather() {
                         </div>)}
                 </div>
             </div>
-            <Forecast apiKey={apiKey} lon={lon} lat={lat} />
+            <Forecast key={lon} apiKey={apiKey} lon={lon} lat={lat} />
         </div >
     )
 }
