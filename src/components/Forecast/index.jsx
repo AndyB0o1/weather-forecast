@@ -59,11 +59,11 @@ export default function Forecast({ lon, lat, apiKey }) {
                 {forecast &&
                     <>
                         <div className="bg-gradient-to-b from-cyan-700 flex m-1 p-1 mx-auto h-fit w-full rounded-lg">
-                            <div className="md:flex md:flex-col">
+                            <div className="sm:flex sm:flex-col">
                             <p className="p-1.5 md:p-1 w-20 text-white drop-shadow-xl text-xl md:text-base">{days[forecast[0].day]}</p>
                             <img className="p-1.5 md:p-0 md:object-scale-down md:h-16" src={`https://openweathermap.org/img/wn/${forecast[0].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
                             </div>
-                            <div className="flex flex-col p-2 mt-6 md:mt-8 md:mr-2">
+                            <div className="flex flex-col p-2 mt-16 md:mt-8 md:mr-2">
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[0].temp}&deg;C</p>
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[0].type}</p>
                             </div>
@@ -73,7 +73,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                             <p className="p-1.5 md:p-1 w-20 text-white drop-shadow-xl text-xl md:text-base">{days[forecast[1].day]}</p>
                             <img className="p-1.5 md:p-0 md:object-scale-down md:h-16" src={`https://openweathermap.org/img/wn/${forecast[1].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
                             </div>
-                            <div className="flex flex-col p-2 mt-6 md:mt-8 md:mr-2">
+                            <div className="flex flex-col p-2 mt-16 md:mt-8 md:mr-2">
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[1].temp}&deg;C</p>
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[1].type}</p>
                             </div>
@@ -83,7 +83,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                             <p className="p-1.5 md:p-1 w-20 text-white drop-shadow-xl text-xl md:text-base">{days[forecast[2].day]}</p>
                             <img className="p-1.5 md:p-0 md:object-scale-down md:h-16" src={`https://openweathermap.org/img/wn/${forecast[2].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
                             </div>
-                            <div className="flex flex-col p-2 mt-6 md:mt-8 md:mr-2">
+                            <div className="flex flex-col p-2 mt-16 md:mt-8 md:mr-2">
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[2].temp}&deg;C</p>
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[2].type}</p>
                             </div>
@@ -93,7 +93,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                             <p className="p-1.5 md:p-1 w-20 text-white drop-shadow-xl text-xl md:text-base">{days[forecast[3].day]}</p>
                             <img className="p-1.5 md:p-0 md:object-scale-down md:h-16" src={`https://openweathermap.org/img/wn/${forecast[3].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
                             </div>
-                            <div className="flex flex-col p-2 mt-6 md:mt-8 md:mr-2">
+                            <div className="flex flex-col p-2 mt-16 md:mt-8 md:mr-2">
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[3].temp}&deg;C</p>
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[3].type}</p>
                             </div>
@@ -103,7 +103,7 @@ export default function Forecast({ lon, lat, apiKey }) {
                             <p className="p-1.5 md:p-1 w-20 text-white drop-shadow-xl text-xl md:text-base">{days[forecast[4].day]}</p>
                             <img className="p-1.5 md:p-0 md:object-scale-down md:h-16" src={`https://openweathermap.org/img/wn/${forecast[4].icon}@2x.png`} alt={`${forecast[0].type}`}></img>
                             </div>
-                            <div className="flex flex-col p-2 mt-6 md:mt-8 md:mr-2">
+                            <div className="flex flex-col p-2 mt-16 md:mt-8 md:mr-2">
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[4].temp}&deg;C</p>
                                 <p className="text-white drop-shadow-xl text-l md:text-sm">{forecast[4].type}</p>
                             </div>

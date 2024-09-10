@@ -52,13 +52,13 @@ export default function Weather() {
             <h1 className="p-2 md:text-2xl">Enter your closest city below to see the current weather conditions</h1>
             <input className="p-1.5 border rounded" type="text" placeholder="Enter closest city name" value={city} onChange={(e) => setCity(e.target.value)}></input>
             <input className="mt-2 md:mt-0 sm:ml-2 p-1.5 border rounded" type="text" placeholder="UK" value={country} onChange={(e) => setCountry(e.target.value)}></input>
-            <button className="my-2 sm:ml-2 md:mt-0 p-2 bg-amber-500 font-bold text-white rounded" onClick={getWeather}>See weather</button>
+            <button className="m-2 sm:ml-2 md:mt-0 p-2 bg-amber-500 font-bold text-white rounded" onClick={getWeather}>See weather</button>
             <div className={`${background}`}>
                 <div>
                     {weather && (
                         <div className="p-2">
                             <div className="weather">
-                                <h2 className="md:m-0.5 p-0.5 text-white drop-shadow-xl rounded ">{weather.location}</h2>
+                                <h2 className="md:m-0.5 p-0.5 text-xl text-white drop-shadow-xl rounded ">{weather.location}</h2>
                                 <div className="flex p-1.5 rounded">
                                     <img className="p-1.5" src={`https://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt={`${weather.condition}`}></img>
                                     <p className="p-1.5 mt-8 text-white drop-shadow-xl rounded">{umbrella}</p>
