@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Forecast from "../Forecast";
 
+
 export default function Weather() {
 
     const [city, setCity] = useState('');
@@ -20,7 +21,7 @@ export default function Weather() {
 
                 let maxTemp = Math.round(data.main.temp);
                 let feelsLike = Math.round(data.main.feels_like);
-                let precipitation = data.weather[0].id;
+                setPrecipitation(data.weather[0].id);
                 setLon(data.coord.lon);
                 setLat(data.coord.lat);
 
